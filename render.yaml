@@ -1,0 +1,14 @@
+services:
+  - type: pserv
+    name: rabbitmq
+    plan: free
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: RABBITMQ_DEFAULT_USER
+        value: myuser
+      - key: RABBITMQ_DEFAULT_PASS
+        value: mypassword
+      - key: RABBITMQ_DEFAULT_VHOST
+        value: /
+
